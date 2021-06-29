@@ -5,43 +5,9 @@ export default function Basket(props) {
 
   return (
     <div >
-      <table>
- 
-
- <tr>
- <td>Sat Jul 16 2021</td>
-   <td>03:00 PM PST -04:00 PM PST</td>
-   <td>0 seats available</td>
-   <td><button class="full">Full</button></td>
-   </tr>
- <tr>
- <td>Sun Jul 17 2021</td>
-   <td>03:00 PM PST -04:00 PM PST</td>
-   <td>0 seats available</td>
-   <td><button class="full">Full</button></td>
-   </tr>
- <tr>
- <td>Mon Jul 18 2021</td>
-   <td>03:00 PM PST -04:00 PM PST</td>
-   <td>0 seats available</td>
-   <td><button class="full">Full</button></td>
-   </tr>
- <tr>
- <td>Tue Jul 19 2021</td>
-   <td>03:00 PM PST -04:00 PM PST</td>
-   <td>0 seats available</td>
-   <td><button class="full">Full</button></td>
-   </tr>
- <tr>
- <td>Wed Jul 20 2021</td>
-   <td>03:00 PM PST -04:00 PM PST</td>
-   <td>0 seats available</td>
-   <td><button class="full">Full</button></td>
-   </tr>
-
-</table>
+     
 <hr/>
-      <h2>Booked Classes</h2>
+    <h2>You have selected these batches</h2>
       <div className="tablehead">
      <tr>
        <th>Date</th>
@@ -51,7 +17,7 @@ export default function Basket(props) {
      </div> 
       <div>
         {cartItems.length === 0 && 
-        <div className="footer">No class selected</div>}
+        <div className="footer">No batch selected (Please click on View Schedule and select batches)</div>}
         { cartItems.length <=3?(
         cartItems.map((item) => (
           <div>

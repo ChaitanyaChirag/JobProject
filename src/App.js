@@ -4,6 +4,9 @@ import Basket from './components/Basket';
 import data from './data';
 import Search from "./Search"
 import { useState } from 'react';
+import { BrowserRouter as Router, Switch , Route } from 'react-router-dom'
+  
+
 function App() {
   const { products } = data;
   const [cartItems, setCartItems] = useState([]);
@@ -16,20 +19,24 @@ function App() {
   
     
   return (
-    <div >
-      <Search/>
-    
-      <div >
-        <Main products={products} onAdd={onAdd}></Main>
-
-        <Basket
-          cartItems={cartItems}
-          onAdd={onAdd}
+    <div>
+      <Router>
+      
+      
+      <Switch>
+      <Route path ="/" exact component={Search}/>
         
-        ></Basket>
+          <Route path ="/schedule"  component={()=>(
+            <Main products={products} onAdd={onAdd}
+           />)}/>
 
 
-      </div>
+        
+        </Switch>
+        </Router>
+        <Basket cartItems={cartItems}  onAdd={onAdd}></Basket>
+
+
     </div>
   );
 }

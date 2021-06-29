@@ -2,6 +2,7 @@ import React, { useState , useEffect } from 'react';
 import Product from './Product';
 import Header from "./Header"
 
+
 export default function Main(props) {
   const [num, setNum] = useState(9);
   const decNum=()=>{
@@ -16,8 +17,8 @@ export default function Main(props) {
   return (
     
       <div>
-      
-     <Header num={num} counter={counter} />
+     <Header num={num} counter={counter}/>
+    
         {products.map((product) => (
           <Product key={product.id} product={product} onAdd={onAdd} decNum={decNum}></Product>
         

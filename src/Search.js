@@ -1,6 +1,8 @@
 
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { useState }  from 'react';
+
 function Search() {
     const dataList = [
         {
@@ -101,7 +103,7 @@ function Search() {
           </div>
 
         </div>
- <button className="searchbutton">View Schedule</button>
+ <Link to="/schedule"><button className="searchbutton">View Schedule</button></Link>
  <hr/>
         </center>
         
