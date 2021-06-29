@@ -1,8 +1,7 @@
 
 import React from 'react'
-import {Link} from 'react-router-dom'
 import { useState }  from 'react';
-
+import {Link} from "react-router-dom"
 function Search() {
     const dataList = [
         {
